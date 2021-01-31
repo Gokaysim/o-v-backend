@@ -1,0 +1,32 @@
+{
+  "name": "backend",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "createOrUpdateDB": "node --es-module-specifier-resolution=node src/scripts/createOrUpdateDB.js",
+    "seedDatabase": "node --es-module-specifier-resolution=node src/scripts/seedDatabase.js",
+    "simpleTest": "node --es-module-specifier-resolution=node src/scripts/simpleTest.js",
+    "dev": "PORT=3001 nodemon --es-module-specifier-resolution=node src/index.js",
+    "start": "node --es-module-specifier-resolution=node src/index.js",
+    "startSql": "pg_ctl -D /usr/local/var/postgres start"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "csv-parse": "^4.15.0",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "helmet": "^4.4.1",
+    "http-errors": "~1.6.3",
+    "joi": "^17.3.0",
+    "moment": "^2.29.1",
+    "pg": "^8.5.1",
+    "pg-native": "^3.0.0",
+    "sequelize": "^6.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1"
+  }
+}
